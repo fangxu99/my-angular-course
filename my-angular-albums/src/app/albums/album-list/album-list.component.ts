@@ -60,4 +60,12 @@ export class AlbumListComponent implements OnInit {
 
         // console.log(`${JSON.stringify(this.albumsArray)}`);
     }
+
+    parentFunctionHandler(album) {
+        alert(
+            `Album ${album.album_name} (id: ${
+                album.id
+            }) was sent from the album card component  `
+        );
+    }
 }
