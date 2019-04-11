@@ -1,4 +1,7 @@
-<div class="card">
+<div
+    class="card"
+    [ngStyle]="{ 'background-color': album.on_sale ? 'green' : '' }"
+>
     <img
         class="card-img-top cover"
         src="assets/img/{{ album.id }}.jpg"
