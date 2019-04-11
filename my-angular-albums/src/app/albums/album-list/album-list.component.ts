@@ -11,8 +11,8 @@ import { AlbumService } from '../shared/album.service';
     styleUrls: ['./album-list.component.css'],
 })
 export class AlbumListComponent implements OnInit {
-    // albumsArray: Album[];
-    albums: Observable<Album[]>;
+    albums: Album[];
+    //albums: Observable<Album[]>;
     constructor(private albumService: AlbumService) {}
 
     ngOnInit() {
@@ -20,7 +20,12 @@ export class AlbumListComponent implements OnInit {
     }
 
     getAlbums() {
-        this.albums = this.albumService.getAlbums();
+        this.albumService
+            .getAlbums()
+            .subscribe(
+                albums => (this.albums = albums),
+                error => console.log('Error: ', error)
+            );
     }
 
     parentFunctionHandler(album) {
