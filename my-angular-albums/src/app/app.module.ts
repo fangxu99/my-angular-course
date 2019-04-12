@@ -7,6 +7,9 @@ import { AlbumListComponent } from './albums/album-list/album-list.component';
 import { AlbumCardComponent } from './albums/album-card/album-card.component';
 import { ReverseStrPipe } from './reverse-str.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
     declarations: [
@@ -14,6 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
         AlbumListComponent,
         AlbumCardComponent,
         ReverseStrPipe,
+        AboutComponent,
+        NavbarComponent,
+        NotfoundComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule],
     providers: [],
