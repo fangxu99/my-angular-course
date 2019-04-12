@@ -4,12 +4,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AlbumListComponent } from './albums/album-list/album-list.component';
 import { AboutComponent } from './about/about.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { AlbumDetailsComponent } from './albums/album-details/album-details.component';
 
 // const routes: Routes = [];
 const routes: Routes = [
     { path: '', redirectTo: '/about', pathMatch: 'full' },
     { path: 'about', component: AboutComponent },
     { path: 'albums', component: AlbumListComponent },
+    { path: 'albums/:id', component: AlbumDetailsComponent },
     { path: '**', component: NotfoundComponent, pathMatch: 'full' },
 ];
 
